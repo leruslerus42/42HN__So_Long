@@ -6,7 +6,7 @@
 /*   By: rrajaobe <rrajaobe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 22:57:59 by rrajaobe          #+#    #+#             */
-/*   Updated: 2021/12/05 04:53:04 by rrajaobe         ###   ########.fr       */
+/*   Updated: 2021/12/05 21:40:04 by rrajaobe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,12 +58,17 @@ void	update_map_2(t_game *game)
 	game->map[game->player_pos_x_previous][game->player_pos_y_previous] = '0';
 	mlx_put_image_to_window(game->mlx, game->window, game->background_img,
 		game->player_pos_y_previous * 100, game->player_pos_x_previous * 100);
+	if (BONUS == 1)
+		game_over_test(game);
 	if (game->collectible_sum == 0 && game->sum_moves)
 		mlx_put_image_to_window(game->mlx, game->window, game->player_ev_img,
 			game->player_pos_y * 100, game->player_pos_x * 100);
 	else
 		mlx_put_image_to_window(game->mlx, game->window, game->player_img,
 			game->player_pos_y * 100, game->player_pos_x * 100);
+	if (BONUS == 1)
+		random_enemy_movement(game);
+
 }
 
 int	ft_exit(void)

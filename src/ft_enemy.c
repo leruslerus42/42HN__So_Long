@@ -6,11 +6,11 @@
 /*   By: rrajaobe <rrajaobe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 10:06:32 by rrajaobe          #+#    #+#             */
-/*   Updated: 2021/12/05 03:23:27 by rrajaobe         ###   ########.fr       */
+/*   Updated: 2021/12/05 21:49:13 by rrajaobe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/so_long_bonus.h"
+#include "../includes/so_long.h"
 
 /*
 *	The enemy make his random move.

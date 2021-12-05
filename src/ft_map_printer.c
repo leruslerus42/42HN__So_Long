@@ -6,7 +6,7 @@
 /*   By: rrajaobe <rrajaobe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 07:43:09 by rrajaobe          #+#    #+#             */
-/*   Updated: 2021/12/05 04:27:25 by rrajaobe         ###   ########.fr       */
+/*   Updated: 2021/12/05 21:55:55 by rrajaobe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,13 @@ void	ft_create_graphic(t_game *game)
 
 void	ft_initialize_graphic(t_game *game, t_graphic *images)
 {
-	images->file = "../assets/background.xpm";
-	images->file2 = "../assets/Dragon.xpm";
-	images->file3 = "../assets/coin.xpm";
-	images->file4 = "../assets/money.xpm";
-	images->file5 = "../assets/Fire.xpm";
-	images->file6 = "../assets/Wolf.xpm";
-	images->file7 = "../assets/Dragon_Ev.xpm";
+	images->file = "./assets/background.xpm";
+	images->file2 = "./assets/Dragon.xpm";
+	images->file3 = "./assets/coin.xpm";
+	images->file4 = "./assets/money.xpm";
+	images->file5 = "./assets/Fire.xpm";
+	images->file6 = "./assets/Wolf.xpm";
+	images->file7 = "./assets/Dragon_Ev.xpm";
 	game->background_img = mlx_xpm_file_to_image
 		(game->mlx, images->file, &(game->height), &(game->width));
 	game->player_img = mlx_xpm_file_to_image
@@ -86,6 +86,13 @@ void	ft_map_printer_2(t_game *game, int i, int j)
 		mlx_put_image_to_window(game->mlx, game->window, game->exit_img,
 			(i * 100), (j * 100));
 	else if (game->map[j][i] == 'X')
-		mlx_put_image_to_window(game->mlx, game->window, game->enemy_img,
-			(i * 100), (j * 100));
+	{
+		if (BONUS)
+			mlx_put_image_to_window(game->mlx, game->window, game->enemy_img,
+				(i * 100), (j * 100));
+		else
+			mlx_put_image_to_window(game->mlx, game->window,
+				game->background_img, (i * 100), (j * 100));
+	}
+
 }

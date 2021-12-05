@@ -6,7 +6,7 @@
 /*   By: rrajaobe <rrajaobe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 07:40:27 by rrajaobe          #+#    #+#             */
-/*   Updated: 2021/12/05 04:37:04 by rrajaobe         ###   ########.fr       */
+/*   Updated: 2021/12/05 21:54:50 by rrajaobe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ int	map_creation_2(t_game *game, char *s, int i, int k)
 			game->map[i][j] = '\0';
 			k++;
 			break ;
-		}	
+		}
 		game->map[i][j] = s[k];
 		j++;
 		k++;

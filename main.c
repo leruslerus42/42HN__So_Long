@@ -6,11 +6,11 @@
 /*   By: rrajaobe <rrajaobe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 09:16:22 by rrajaobe          #+#    #+#             */
-/*   Updated: 2021/12/05 05:07:16 by rrajaobe         ###   ########.fr       */
+/*   Updated: 2021/12/05 21:45:19 by rrajaobe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/so_long.h"
+#include "./includes/so_long.h"
 /*
 *	This project is about building a Videogame in 2D.
 *	A player inside a map should collect all the collectible items 
@@ -33,12 +33,15 @@ int	main(int argc, char **argv)
 
 	ft_initialize_struct(&game, argv, argc);
 	ft_initalize_methods(&game, argv[1]);
+	
 	game.mlx = mlx_init();
 	game.window = mlx_new_window(game.mlx, game.column * 100,
 			game.row * 100, "THE DRAGON'S REDEMPTION");
 	ft_create_graphic(&game);
 	mlx_key_hook(game.window, movement_checker, &game);
 	mlx_hook(game.window, 17, (1L << 17), ft_exit, &game);
+	////system ("leaks a.out");
 	mlx_loop(game.mlx);
+
 	return (0);
 }

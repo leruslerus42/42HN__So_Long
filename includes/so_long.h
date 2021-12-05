@@ -6,7 +6,7 @@
 /*   By: rrajaobe <rrajaobe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 09:39:09 by rrajaobe          #+#    #+#             */
-/*   Updated: 2021/12/05 03:25:35 by rrajaobe         ###   ########.fr       */
+/*   Updated: 2021/12/05 21:49:32 by rrajaobe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,10 @@ typedef struct s_game{
 	int		player_pos_y;
 	int		player_pos_x_previous;
 	int		player_pos_y_previous;
+	int		enemy_pos_x;
+	int		enemy_pos_y;
+	int		enemy_pos_x_previous;
+	int		enemy_pos_y_previous;
 
 	int		collectible_sum;
 	int		sum_moves;
@@ -87,7 +91,7 @@ void	ft_map_printer_2(t_game *game, int i, int j);
 /*---------------------MAP_UPDATE---------------------------------*/
 void	update_map(t_game *game);
 void	update_map_2(t_game *game);
-int	ft_exit(void);
+int		ft_exit(void);
 
 /*---------------------GET_NEXT_LINE------------------------------*/
 char	*get_next_line(int fd);
@@ -104,5 +108,10 @@ int		ft_error_walls_bad_aligned(t_game *game);
 int		ft_error_map_not_rectangular(t_game *game);
 int		ft_error_check_gaming_items(t_game *game);
 char	*ft_error_items_2_wrong_inputs(t_game *game, char *s, int i, int j);
+
+/*---------------------ENEMY----------------------------------------*/
+void	calculate_enemy_position(t_game *game);
+void	random_enemy_movement(t_game *game);
+void	game_over_test(t_game *game);
 
 #endif
