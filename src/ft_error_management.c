@@ -6,7 +6,7 @@
 /*   By: rrajaobe <rrajaobe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 08:48:44 by rrajaobe          #+#    #+#             */
-/*   Updated: 2021/12/05 04:46:26 by rrajaobe         ###   ########.fr       */
+/*   Updated: 2021/12/05 23:01:22 by rrajaobe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ void	ft_error_ber(char **argv, int argc)
 			exit(0);
 		}
 	}
+	free(ext);
 }
 
 /*
@@ -95,7 +96,6 @@ int	ft_error_check_gaming_items(t_game *game)
 	s = malloc(3 * sizeof(int));
 	ft_bzero(s, 3);
 	i = 1;
-	j = 1;
 	while (i < game->row - 2)
 	{
 		j = 1;
@@ -120,7 +120,7 @@ char	*ft_error_items_2_wrong_inputs(t_game *game, char *s, int i, int j)
 {
 	char	*allowed_chars;
 	int		len;
-	
+
 	allowed_chars = ft_strdup("10CPEX");
 	len = 6;
 	if (s[0] == 0 && game->map[i][j] == 'P')

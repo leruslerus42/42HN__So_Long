@@ -6,7 +6,7 @@
 /*   By: rrajaobe <rrajaobe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 07:40:27 by rrajaobe          #+#    #+#             */
-/*   Updated: 2021/12/05 21:54:50 by rrajaobe         ###   ########.fr       */
+/*   Updated: 2021/12/05 22:59:55 by rrajaobe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,14 @@
 void	calculate_map_coordinates(char *argv, struct s_game *game)
 {
 	int		fd;
-	char	*s;//char	*temp; use laterfor leaks
+	char	*s;
+	char	*temp;
 
+	s = NULL;
+	temp = NULL;
 	fd = open(argv, O_RDONLY);
 	if (fd == -1)
 		exit(0);
-	s = ft_strdup("");
 	s = get_next_line(fd);
 	game->row = ft_count_rows(s, '\n');
 	game->column = ft_my_strchr(s, '\n');

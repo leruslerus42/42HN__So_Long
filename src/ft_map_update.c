@@ -6,7 +6,7 @@
 /*   By: rrajaobe <rrajaobe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 22:57:59 by rrajaobe          #+#    #+#             */
-/*   Updated: 2021/12/05 21:40:04 by rrajaobe         ###   ########.fr       */
+/*   Updated: 2021/12/05 22:59:38 by rrajaobe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,6 @@ void	update_map_2(t_game *game)
 			game->player_pos_y * 100, game->player_pos_x * 100);
 	if (BONUS == 1)
 		random_enemy_movement(game);
-
 }
 
 int	ft_exit(void)

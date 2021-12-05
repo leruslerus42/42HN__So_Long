@@ -6,7 +6,7 @@
 /*   By: rrajaobe <rrajaobe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 07:43:09 by rrajaobe          #+#    #+#             */
-/*   Updated: 2021/12/05 21:55:55 by rrajaobe         ###   ########.fr       */
+/*   Updated: 2021/12/05 22:58:58 by rrajaobe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,5 +94,4 @@ void	ft_map_printer_2(t_game *game, int i, int j)
 			mlx_put_image_to_window(game->mlx, game->window,
 				game->background_img, (i * 100), (j * 100));
 	}
-
 }
