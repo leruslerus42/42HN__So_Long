@@ -6,11 +6,11 @@
 /*   By: rrajaobe <rrajaobe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 07:43:09 by rrajaobe          #+#    #+#             */
-/*   Updated: 2021/12/04 23:11:33 by rrajaobe         ###   ########.fr       */
+/*   Updated: 2021/12/05 04:27:25 by rrajaobe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "../includes/so_long.h"
 
 /*
 *	Here I first initialize the graphic part converting the Assets in the format
@@ -26,13 +26,13 @@ void	ft_create_graphic(t_game *game)
 
 void	ft_initialize_graphic(t_game *game, t_graphic *images)
 {
-	images->file = "./Imgs_100x100/background.xpm";
-	images->file2 = "./Imgs_100x100/Dragon.xpm";
-	images->file3 = "./Imgs_100x100/coin.xpm";
-	images->file4 = "./Imgs_100x100/money.xpm";
-	images->file5 = "./Imgs_100x100/Fire.xpm";
-	images->file6 = "./Imgs_100x100/Wolf.xpm";
-	images->file7 = "./Imgs_100x100/Dragon_Ev.xpm";
+	images->file = "../assets/background.xpm";
+	images->file2 = "../assets/Dragon.xpm";
+	images->file3 = "../assets/coin.xpm";
+	images->file4 = "../assets/money.xpm";
+	images->file5 = "../assets/Fire.xpm";
+	images->file6 = "../assets/Wolf.xpm";
+	images->file7 = "../assets/Dragon_Ev.xpm";
 	game->background_img = mlx_xpm_file_to_image
 		(game->mlx, images->file, &(game->height), &(game->width));
 	game->player_img = mlx_xpm_file_to_image

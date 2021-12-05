@@ -6,11 +6,11 @@
 /*   By: rrajaobe <rrajaobe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 08:48:44 by rrajaobe          #+#    #+#             */
-/*   Updated: 2021/12/04 22:48:41 by rrajaobe         ###   ########.fr       */
+/*   Updated: 2021/12/05 04:46:26 by rrajaobe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "../includes/so_long.h"
 
 /*
 *	Check if the map hat the right extension.
@@ -101,22 +101,26 @@ int	ft_error_check_gaming_items(t_game *game)
 		j = 1;
 		while (j < game->column - 2)
 		{
-			s = ft_error_items_2_plus_wrong_inputs(game, s, i, j);
+			s = ft_error_items_2_wrong_inputs(game, s, i, j);
 			if (s[0] == 1 && s[1] == 1 && s[2] == 1)
+			{
+				free(s);
 				return (FALSE);
+			}	
 			j++;
 		}
 		i++;
 	}
 	printf("%s have you at least one P-C-E in the rectangular map?\n", ERROR);
+	free(s);
 	return (TRUE);
 }
 
-char	*ft_error_items_2_plus_wrong_inputs(t_game *game, char *s, int i, int j)
+char	*ft_error_items_2_wrong_inputs(t_game *game, char *s, int i, int j)
 {
 	char	*allowed_chars;
 	int		len;
-
+	
 	allowed_chars = ft_strdup("10CPEX");
 	len = 6;
 	if (s[0] == 0 && game->map[i][j] == 'P')
@@ -136,5 +140,6 @@ char	*ft_error_items_2_plus_wrong_inputs(t_game *game, char *s, int i, int j)
 			exit(0);
 		}
 	}
+	free(allowed_chars);
 	return (s);
 }

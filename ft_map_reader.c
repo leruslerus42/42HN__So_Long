@@ -6,11 +6,11 @@
 /*   By: rrajaobe <rrajaobe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 07:40:27 by rrajaobe          #+#    #+#             */
-/*   Updated: 2021/12/04 22:24:26 by rrajaobe         ###   ########.fr       */
+/*   Updated: 2021/12/05 04:37:04 by rrajaobe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "../includes/so_long.h"
 
 /*
 * 	First I first calculate the numer of columns and rows of the map.
@@ -61,7 +61,6 @@ int	ft_count_rows(const char *s, int c)
 void	map_creation(t_game *game, char *s)
 {
 	int		i;
-	int		j;
 	int		k;
 
 	game->map = (char **) malloc (sizeof (char *) * game->row);
@@ -75,6 +74,7 @@ void	map_creation(t_game *game, char *s)
 		k = map_creation_2(game, s, i, k);
 		i++;
 	}
+	free(s);
 	check_map_creations_errors(game);
 }
 

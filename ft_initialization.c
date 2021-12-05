@@ -6,11 +6,11 @@
 /*   By: rrajaobe <rrajaobe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 10:07:16 by rrajaobe          #+#    #+#             */
-/*   Updated: 2021/12/05 00:59:16 by rrajaobe         ###   ########.fr       */
+/*   Updated: 2021/12/05 03:23:01 by rrajaobe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "../includes/so_long.h"
 
 void	ft_initialize_struct(t_game *game, char **argv, int argc)
 {
@@ -19,10 +19,6 @@ void	ft_initialize_struct(t_game *game, char **argv, int argc)
 	game->player_pos_y = 0;
 	game->player_pos_x_previous = 0;
 	game->player_pos_y_previous = 0;
-	game->enemy_pos_x = 0;
-	game->enemy_pos_y = 0;
-	game->enemy_pos_x_previous = 0;
-	game->enemy_pos_y_previous = 0;
 	game->map = NULL;
 	game->row = 0;
 	game->column = 0;
@@ -32,12 +28,9 @@ void	ft_initialize_struct(t_game *game, char **argv, int argc)
 
 void	ft_initalize_methods(t_game *game, char *argv)
 {
-	char	*s;
-
 	calculate_map_coordinates(argv, game);
 	calculate_player_position(game);
 	calculate_collectible_sum(game);
-	calculate_enemy_position(game);
 }
 
 void	calculate_player_position(t_game *game)

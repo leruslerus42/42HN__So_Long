@@ -6,11 +6,11 @@
 /*   By: rrajaobe <rrajaobe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/06 08:35:34 by rrajaobe          #+#    #+#             */
-/*   Updated: 2021/12/04 04:38:24 by rrajaobe         ###   ########.fr       */
+/*   Updated: 2021/12/05 02:25:01 by rrajaobe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "../includes/so_long.h"
 
 /*
 *	Return minum 1, because should be at least 1 column and row in the map

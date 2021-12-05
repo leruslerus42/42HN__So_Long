@@ -6,11 +6,11 @@
 /*   By: rrajaobe <rrajaobe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 15:31:02 by rrajaobe          #+#    #+#             */
-/*   Updated: 2021/12/05 01:00:16 by rrajaobe         ###   ########.fr       */
+/*   Updated: 2021/12/05 03:07:15 by rrajaobe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "../includes/so_long.h"
 
 /*
 *	This functions check which key was pressed,
@@ -77,9 +77,4 @@ void	moving_left_right(t_game *game, int keycode)
 		}
 		game->player_pos_y += 1;
 	}
-}
-
-void	ft_exit(void)
-{
-	exit(0);
 }
