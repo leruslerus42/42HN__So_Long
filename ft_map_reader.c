@@ -6,7 +6,7 @@
 /*   By: rrajaobe <rrajaobe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 07:40:27 by rrajaobe          #+#    #+#             */
-/*   Updated: 2021/12/04 21:11:55 by rrajaobe         ###   ########.fr       */
+/*   Updated: 2021/12/04 22:24:26 by rrajaobe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 /*
 * 	First I first calculate the numer of columns and rows of the map.
 */
-char	*calculate_map_coordinates(char *argv, struct s_game *game)
+void	calculate_map_coordinates(char *argv, struct s_game *game)
 {
 	int		fd;
 	char	*s;//char	*temp; use laterfor leaks
@@ -27,7 +27,7 @@ char	*calculate_map_coordinates(char *argv, struct s_game *game)
 	s = get_next_line(fd);
 	game->row = ft_count_rows(s, '\n');
 	game->column = ft_my_strchr(s, '\n');
-	return (s);
+	map_creation(game, s);
 }
 
 int	ft_count_rows(const char *s, int c)
@@ -72,25 +72,12 @@ void	map_creation(t_game *game, char *s)
 	while (i < game->row)
 	{
 		game->map[i] = (char *) malloc (game->column + 1);
-		//k = map_creation_2(game, s, i, k);
-		j = 0;
-		while (j < game->column + 1)
-		{
-			if (j == game->column)
-			{
-				game->map[i][j] = '\0';
-				k++;
-				break ;
-			}	
-			game->map[i][j] = s[k];
-			j++;
-			k++;
-		}
+		k = map_creation_2(game, s, i, k);
 		i++;
 	}
 	check_map_creations_errors(game);
 }
-/*
+
 int	map_creation_2(t_game *game, char *s, int i, int k)
 {
 	int	j;
@@ -109,7 +96,7 @@ int	map_creation_2(t_game *game, char *s, int i, int k)
 		k++;
 	}
 	return (k);
-}*/
+}
 
 /*
 *	Endly I search for possible errors that could have occured

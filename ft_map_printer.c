@@ -6,7 +6,7 @@
 /*   By: rrajaobe <rrajaobe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 07:43:09 by rrajaobe          #+#    #+#             */
-/*   Updated: 2021/12/04 05:32:18 by rrajaobe         ###   ########.fr       */
+/*   Updated: 2021/12/04 23:11:33 by rrajaobe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void	ft_initialize_graphic(t_game *game, t_graphic *images)
 		(game->mlx, images->file5, &(game->height), &(game->width));
 	game->enemy_img = mlx_xpm_file_to_image
 		(game->mlx, images->file6, &(game->height), &(game->width));
-	game->player_evolution_img = mlx_xpm_file_to_image
+	game->player_ev_img = mlx_xpm_file_to_image
 		(game->mlx, images->file7, &(game->height), &(game->width));
 	game->height = game->row;
 	game->width = game->column;

@@ -6,7 +6,7 @@
 /*   By: rrajaobe <rrajaobe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 10:07:16 by rrajaobe          #+#    #+#             */
-/*   Updated: 2021/12/04 21:10:25 by rrajaobe         ###   ########.fr       */
+/*   Updated: 2021/12/05 00:59:16 by rrajaobe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,15 +32,12 @@ void	ft_initialize_struct(t_game *game, char **argv, int argc)
 
 void	ft_initalize_methods(t_game *game, char *argv)
 {
-	char *s;
+	char	*s;
 
-	s = calculate_map_coordinates(argv, game);
-	map_creation(game, s);
-	//calculate_player_position(game);
-	//calculate_collectible_sum(game);
-	//calculate_enemy_position(game);
-	
-
+	calculate_map_coordinates(argv, game);
+	calculate_player_position(game);
+	calculate_collectible_sum(game);
+	calculate_enemy_position(game);
 }
 
 void	calculate_player_position(t_game *game)
