@@ -6,7 +6,7 @@
 /*   By: rrajaobe <rrajaobe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 09:16:22 by rrajaobe          #+#    #+#             */
-/*   Updated: 2021/12/05 22:58:08 by rrajaobe         ###   ########.fr       */
+/*   Updated: 2021/12/16 13:50:41 by rrajaobe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ int	main(int argc, char **argv)
 
 	ft_initialize_struct(&game, argv, argc);
 	ft_initalize_methods(&game, argv[1]);
-
 	game.mlx = mlx_init();
 	game.window = mlx_new_window(game.mlx, game.column * 100,
 			game.row * 100, "THE DRAGON'S REDEMPTION");
@@ -41,6 +40,6 @@ int	main(int argc, char **argv)
 	mlx_key_hook(game.window, movement_checker, &game);
 	mlx_hook(game.window, 17, (1L << 17), ft_exit, &game);
 	mlx_loop(game.mlx);
-
+	exit (0);
 	return (0);
 }

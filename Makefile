@@ -6,7 +6,7 @@
 #    By: rrajaobe <rrajaobe@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/05 22:00:06 by rrajaobe          #+#    #+#              #
-#    Updated: 2021/12/05 22:05:16 by rrajaobe         ###   ########.fr        #
+#    Updated: 2021/12/16 13:44:13 by rrajaobe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ NAME = so_long
 
 FLAGS = -Wall -Wextra -Werror
 
-MLX = libmlx.a -framework OpenGL -framework AppKit
+MLX = ./mlx/libmlx.a -framework OpenGL -framework AppKit
 
 LIBFTPATH =	./libft/
 
