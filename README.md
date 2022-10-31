@@ -59,7 +59,8 @@ As all other C projects at the 42 school, the code has to written in accordance 
 - the only predefined functions allowed for this project are: open, close, read, write, malloc, free, perror, strerror, exit plus all the functions of the math and miniLibx Library.
 
 ## RESULT 
-<img width="1992" alt="Screen Shot 2021-10-17 at 9 09 50 AM" src="https://user-images.githubusercontent.com/85942176/137615923-192c1574-f5cf-4580-99db-a64069b81df6.png">
+<img width="1174" alt="Screenshot 2022-10-31 at 04 11 38" src="https://user-images.githubusercontent.com/85942176/198926686-9989ad6c-6441-48de-b42a-b87d3d3a23fd.png">
+
 
 
 
