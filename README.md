@@ -7,7 +7,8 @@ As a graphic design project, the program will create a game inside a window corr
 The goal the player should archieve is to collect all the coins on a map, before reaching the exit.
 In the bonus version, the player will be chased from a computerized enemy player, that will try to reach you: the goal is to collect all the coins and reaching the exit before the enemy reaches you.
 
-## RESULT 
+## GRAPHIC 
+
 <img width="999" alt="Screen Shot 2021-12-16 at 2 23 44 PM" src="https://user-images.githubusercontent.com/85942176/146380241-ed53aeb4-65fe-45f0-8076-2954b3b16647.png">
 
 
@@ -58,6 +59,9 @@ As all other C projects at the 42 school, the code has to written in accordance 
 - the only predefined functions allowed for this project are: open, close, read, write, malloc, free, perror, strerror, exit plus all the functions of the math and miniLibx Library.
 
 
+## RESULT
+
+<img width="1155" alt="Screenshot 2022-10-30 at 09 33 11" src="https://user-images.githubusercontent.com/85942176/198869646-110923ba-77cc-48e7-831b-7cd0526bad6e.png">
 
 
 Enjoy ;-)
